@@ -1,8 +1,8 @@
-package com.obj2;
+package com.ejerciciotarjeta;
 
 import java.util.Scanner;
 
-public class Tarjeta {
+public class Tarjeta implements Comparable <Tarjeta>{
 	
 	private int acumcredito;
 	private double calificacion_crediticia;
@@ -19,6 +19,8 @@ public class Tarjeta {
 		setDinero(dinero);
 	}
 	
+
+
 	
 	public void setLimite_gasto(double limite_gasto) {
 		this.limite_gasto = limite_gasto;
@@ -97,6 +99,25 @@ public class Tarjeta {
 	        respuesta2 = sc.next();
 	    }
 	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "Tarjeta [acumcredito=" + acumcredito + ", calificacion_crediticia=" + calificacion_crediticia
+				+ ", limite_gasto=" + limite_gasto + ", dineroacumulado=" + dineroacumulado + "]";
+	}
+
+
+
+
+	@Override
+	public int compareTo(Tarjeta o) {
+		
+		return 0;
+	}
+
 
 	
 }
